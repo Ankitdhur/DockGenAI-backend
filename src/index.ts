@@ -13,10 +13,7 @@ const SERVER_PORT = process.env.PORT || 3001;
 
 // Middleware
 application.use(cors({
-  origin: [
-    'https://dock-gen-ai-front.vercel.app',
-    'http://localhost:3000'
-  ],
+  origin: '*',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
